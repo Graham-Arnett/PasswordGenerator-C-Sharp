@@ -19,22 +19,34 @@
                 Console.WriteLine();
                 for (int i = passSize -1; i >= 0; i--)//originally it was i=passSize and the last i was an increment but that filled the page.
                 {
-                    int symbolType = random.Next(1,4);
+                    int symbolType = random.Next(0,3);
                     int letterChoice = random.Next(0,26);
                     int numChoice = random.Next(0,10);
                     int symChoice = random.Next(0,14);
                     //might come back to this with a switch statement version
-                    if (symbolType == 1)
+                    //if (symbolType == 1)
+                    //{
+                    //    Console.Write(letters[letterChoice]);
+                    //}
+                    //else if (symbolType == 2)
+                    //{
+                    //    Console.Write(numbers[numChoice]);
+                    //}
+                    //else
+                    //{
+                    //    Console.Write(specialSyms[symChoice]);
+                    //}
+                    switch (symbolType) 
                     {
-                        Console.Write(letters[letterChoice]);
-                    }
-                    else if (symbolType == 2)
-                    {
-                        Console.Write(numbers[numChoice]);
-                    }
-                    else
-                    {
-                        Console.Write(specialSyms[symChoice]);
+                        case 0:
+                            Console.Write(letters[letterChoice]);
+                            break;
+                        case 1:
+                            Console.Write(numbers[numChoice]);
+                            break;
+                        case 2:
+                            Console.Write(specialSyms[symChoice]);
+                            break;
                     }
                 }
 
